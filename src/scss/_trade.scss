@@ -1,0 +1,110 @@
+.trade {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      #fbebee 0%,
+      #f8f4f8 45.37%,
+      #eeebf9 63.02%,
+      #dcf2fc 100%
+    );
+    .demoAccountWrap {
+        width: 100vw;
+        height: 100vh;
+        background: transparent;
+        position: absolute;
+    }
+    iframe {
+        width: 100vw;
+        min-height: 100vh;
+        border: none;
+    }
+    &__wrapper {
+      padding: 10rem 0 0;
+      @media screen and (max-width: 1500px) {
+        padding: 10rem 0 0;
+      }
+      @include breakpoint-down(medium) {
+        padding: 10rem 0 0;
+      }
+      @include breakpoint-down(small) {
+        padding: 10rem 0 0;
+      }
+    }
+    &__heading {
+      text-align: center;
+      margin-bottom: 12rem;
+      @include breakpoint-down(small) {
+        margin-bottom: 8rem;
+      }
+      h2 {
+        font-size: 7rem;
+        font-weight: 500;
+        @media screen and (max-width: 1400px) {
+          font-size: 5rem;
+        }
+        @include breakpoint-down(medium) {
+          font-size: 4.5rem;
+        }
+        @include breakpoint-down(small) {
+          font-size: 3rem;
+        }
+      }
+      p {
+        font-size: 1.6rem;
+        margin-block: 2rem;
+      }
+    }
+    &__content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      @include breakpoint-down(medium) {
+        flex-direction: column;
+      }
+      h2 {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+      h3 {
+        font-size: 1.8rem;
+        margin-block: 2rem;
+      }
+      h4 {
+        font-size: 2rem;
+        margin-block: 1rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+      ul {
+        margin-left: 5rem;
+        li {
+          font-size: 1.6rem;
+          margin-block: 1rem;
+          font-weight: 500;
+          font-family: "Rubik";
+        }
+        li::marker {
+          color: #5b3ec1;
+          font-size: 2.5rem;
+        }
+      }
+      .trade__content-single-info {
+        margin-bottom: 5rem;
+      }
+      &-poi {
+        flex-basis: 100%;
+        // margin-right: 5rem;
+        @include breakpoint-down(medium) {
+          margin-right: 0rem;
+          margin-bottom: 3rem;
+        }
+      }
+      &-por {
+        flex-basis: 100%;
+      }
+    }
+  }
+  

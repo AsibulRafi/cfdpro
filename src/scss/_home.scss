@@ -1,0 +1,242 @@
+.hero {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #fbebee 0%,
+    #f8f4f8 45.37%,
+    #eeebf9 63.02%,
+    #dcf2fc 100%
+  );
+  @include breakpoint-down(small) {
+    height: 100%;
+  }
+  &__wrapper {
+    padding: 20rem 20rem;
+    @media screen and (max-width: 1500px) {
+      padding: 20rem 5rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 20rem 4rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 15rem 0rem;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      .button-container {
+        justify-content: center;
+      }
+    }
+
+    &-text {
+      flex-basis: 40%;
+      margin-right: 8rem;
+      @media screen and (max-width: 1700px) {
+        flex-basis: 50%;
+      }
+      @include breakpoint-down(medium) {
+        text-align: center;
+        flex-basis: 100%;
+        margin-right: 0rem;
+        margin-bottom: 2rem;
+      }
+      h2 {
+        font-size: 6.5rem;
+        font-weight: 500;
+        @media screen and (max-width: 1400px) {
+          font-size: 5rem;
+        }
+        @include breakpoint-down(medium) {
+          font-size: 4.5rem;
+        }
+        @include breakpoint-down(small) {
+          font-size: 3rem;
+        }
+      }
+    }
+    &-img {
+      flex-basis: 65%;
+      @media screen and (max-width: 1500px) {
+        flex-basis: 70%;
+      }
+      @include breakpoint-down(medium) {
+        flex-basis: 100%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+.experience {
+  padding: 10rem 20rem;
+  &__heading {
+    font-size: 4rem;
+    font-weight: 500;
+    @include breakpoint-down(small) {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+  }
+  @media screen and (max-width: 1450px) {
+    padding: 10rem 4rem;
+    h2 {
+      margin-left: 5rem;
+    }
+  }
+  @include breakpoint-down(medium) {
+    padding: 10rem 2rem;
+    h2 {
+      margin-left: 3rem;
+    }
+  }
+  @include breakpoint-down(small) {
+    padding: 10rem 1rem;
+    h2 {
+      margin-left: 2rem;
+    }
+  }
+}
+.home__line {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #c4c4c4;
+}
+// Take Control
+.take__control {
+  margin: 10rem auto;
+  @include breakpoint-down(medium) {
+    margin: 5rem 2rem;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 1150px) {
+      flex-direction: column;
+    }
+    &__infos {
+      margin-right: 10rem;
+      width: 50rem;
+      @media screen and (max-width: 1150px) {
+        text-align: center;
+
+        margin-right: 0rem;
+        margin-bottom: 5rem;
+      }
+      @include breakpoint-down(medium) {
+        width: 100%;
+      }
+      .button-container {
+        justify-content: center;
+      }
+      h2 {
+        font-size: 4rem;
+        margin-bottom: 5rem;
+        @include breakpoint-down(small) {
+          font-size: 2.5rem;
+        }
+      }
+    }
+    &__info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+      h4 {
+        font-size: 2rem;
+        margin-right: 2rem;
+        @include breakpoint-down(small) {
+          font-size: 1.6rem;
+        }
+      }
+      p {
+        margin: 0;
+        font-size: 2rem;
+        text-align: left;
+        @include breakpoint-down(small) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+    &__image {
+      @include breakpoint-down(small) {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// Get More
+.getMore {
+  margin: 10rem auto;
+  @include breakpoint-down(medium) {
+    margin: 5rem 2rem;
+  }
+  &-content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 1150px) {
+      flex-direction: column;
+    }
+    &__infos {
+      margin-right: 2rem;
+      @media screen and (max-width: 1150px) {
+        text-align: center;
+        margin-right: 0rem;
+        margin-bottom: 5rem;
+      }
+      .button-container {
+        justify-content: center;
+      }
+      h2 {
+        font-size: 4rem;
+        margin-bottom: 5rem;
+        @include breakpoint-down(small) {
+          font-size: 2.5rem;
+        }
+      }
+    }
+    &__info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      h4 {
+        font-size: 2.5rem;
+        margin-right: 2rem;
+        @include breakpoint-down(small) {
+          font-size: 1.6rem;
+        }
+      }
+      p {
+        margin: 0;
+        font-size: 2rem;
+        text-align: left;
+        @include breakpoint-down(small) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+    &__image {
+      @include breakpoint-down(small) {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

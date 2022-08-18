@@ -1,0 +1,101 @@
+.buySell {
+  margin: 5rem auto;
+  text-align: center;
+}
+.buySell h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.buySell__form {
+  margin-block: 4rem;
+}
+.buySell__form input {
+  outline: none;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  padding: 2rem 4rem 1rem 3rem;
+  border-bottom: 3px solid #5b3ec1;
+  width: 60%;
+  font-size: 1.8rem;
+  font-family: "Rubik";
+  font-weight: 500;
+}
+.buySell__form button {
+  position: relative;
+  left: -5rem;
+  background: transparent;
+  border: none;
+}
+.buySell__form button i {
+  color: #5b3ec1;
+  font-size: 3rem;
+}
+.buySell__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #333;
+  color: #fff;
+  margin-bottom: 4rem;
+}
+.buySell__item p {
+  font-size: 2rem;
+  margin-inline: 3rem;
+  margin-block: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+.buySell__item p:hover {
+  border-bottom: 2px solid #5b3ec1;
+}
+.buySell__content .button-container {
+  justify-content: center;
+}
+.buySell__content .button-container .button1 {
+  background-color: transparent;
+  border: 2px solid red;
+  color: red;
+}
+.buySell__content .button-container .button2 {
+  background: green;
+  border: none;
+}
+
+@media screen and (max-width: 1050px) {
+  .buySell h2 {
+    font-size: 3rem;
+  }
+  .buySell__form input {
+    width: 80%;
+    font-size: 1.5rem;
+  }
+  .buySell__content img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .buySell h2 {
+    font-size: 2.4rem;
+  }
+  .buySell__form input {
+    width: 350px;
+  }
+  .buySell__form button {
+    left: -2rem;
+  }
+  .buySell__form button i {
+    font-size: 2rem;
+  }
+  .buySell__item p {
+    font-size: 1.6rem;
+    margin-inline: 1rem;
+    margin-block: 1rem;
+  }
+  .buySell__content img {
+    margin-right: 0rem;
+  }
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <link href="https://wd.supracrm.com/clientarea/css/app.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <title>CFDPRO</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+    integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://wd.supracrm.com/sign-up-form?token=U0G8U8YRfbBmvlSKCTSbbAFadQIKG81aSytvGCEsSkvFbT"
+    crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
+
+    html {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      box-sizing: border-box;
+    }
+
+    /*Section used for centering process*/
+    section {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .accordion-item hr {
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .accordion-link {
+      font-size: 1.6rem;
+      color: rgba(255, 255, 255, .8);
+      text-decoration: none;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+
+    .accordion-link h3 {
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    .accordion-link i {
+      color: #e7d5ff;
+      padding: .5rem;
+    }
+
+    .accordion-link ul {
+      display: flex;
+      align-items: flex-end;
+      list-style-type: none;
+      margin-left: 25px;
+    }
+
+    .accordion-link li {
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.4);
+      padding: 0 0 1px 5px;
+    }
+
+    .accordion-link div {
+      display: flex;
+    }
+
+    .accordion-link .ion-md-arrow-down {
+      display: none;
+    }
+
+    .answer {
+      max-height: 0;
+      overflow: hidden;
+      position: relative;
+      transition: max-height 650ms;
+    }
+
+    .answer p {
+      color: #fff;
+      font-size: 15px;
+      padding: 2rem;
+
+    }
+
+    .accordion-item:target .answer {
+      max-height: 100%;
+    }
+
+    .accordion-item:target .accordion-link .ion-md-arrow-forward {
+      display: none
+    }
+
+    .accordion-item:target .accordion-link .ion-md-arrow-down {
+      display: block;
+    }
+
+    .fancybox-content {
+      padding: 0 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="stock"></div>
+  <div id="sign-up-modal" style="display: none;">
+    <script src="https://wd.supracrm.com/sign-up-form?token=KktHLXPgr2QO3PNTTQISoSOi1gRJ462b9uXz6tUBkMjYsb"
+      crossorigin="anonymous"></script>
+  </div>
+
+  <div id="client-area-app">
+
+    <client-area ref="childref"></client-area>
+    <login></login>
+
+  </div>
+  <script>
+    clientAreaSettings = {
+      clientId: 'ZKGkUuBOLhlL4BtuJcH1cLzkUdla1RAY1NVsdAxWg51xl0', // required
+      loginLogo: 'http://localhost:3000/static/media/logo.4d038ff8.png'
+    };
+
+    var clientAreaEvents = {
+      loginSuccess: loginSuccessCallback,
+      logout: logoutCallback,
+      clickJoinUs: clickJoinUsCallback
+    };
+
+    function loginSuccessCallback(event) {
+      window.loginSuccess = true;
+      user = event.user;
+      localStorage.setItem('user', user);
+      console.log('user', user);
+      // location.reload();
+    }
+    function logoutCallback(event) {
+      window.loginSuccess = false;
+      // location.reload();
+    }
+    function clickJoinUsCallback() {
+      $.fancybox.open({
+        src: '#sign-up-modal',
+        type: 'inline',
+        opts: {}
+      });
+    }
+    function clickLoginCallback() {
+      $.fancybox.open({
+        src: '#sign-up-modal',
+        type: 'inline',
+        opts: {}
+      });
+    }
+  </script>
+
+  <script src="https://wd.supracrm.com/clientarea/scripts/app.js"></script>
+</body>
+
+</html>

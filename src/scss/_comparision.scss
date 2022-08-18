@@ -1,0 +1,189 @@
+.account__comparison {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #fbebee 0%,
+    #f8f4f8 45.37%,
+    #eeebf9 63.02%,
+    #dcf2fc 100%
+  );
+
+  &__wrapper {
+    padding: 20rem 20rem;
+    @media screen and (max-width: 1500px) {
+      padding: 20rem 5rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 20rem 4rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 15rem 2rem;
+    }
+  }
+  &-heading {
+    text-align: center;
+    h2 {
+      font-size: 7rem;
+      font-weight: 500;
+      margin-bottom: 3rem;
+      letter-spacing: 0.1em;
+      @media screen and (max-width: 1400px) {
+        font-size: 5rem;
+      }
+      @include breakpoint-down(medium) {
+        font-size: 4.5rem;
+      }
+      @include breakpoint-down(small) {
+        font-size: 3rem;
+      }
+    }
+    p {
+      font-size: 1.7rem;
+      line-height: 30px;
+      letter-spacing: 0.1em;
+      @include breakpoint-down(small) {
+        font-size: 1.5rem;
+        line-height: 24px;
+      }
+    }
+  }
+  &-content {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    @include breakpoint-down(small) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &_button {
+      font-family: "Rubik";
+      font-size: 2.5rem;
+      margin-inline: 2rem;
+      width: 20rem;
+      padding: 1.5rem 0rem;
+      background: #5b3ec1;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      @include breakpoint-down(small) {
+        margin-block: 2rem;
+      }
+    }
+    .fbtn_active {
+      background: #34cbad;
+    }
+  }
+}
+.financial {
+  padding: 10rem 20rem;
+  @media screen and (max-width: 1500px) {
+    padding: 10rem 5rem;
+  }
+  @include breakpoint-down(medium) {
+    padding: 10rem 4rem;
+  }
+  @include breakpoint-down(small) {
+    padding: 8rem 2rem;
+  }
+  &__heading {
+    h2 {
+      font-size: 5rem;
+      font-weight: 500;
+      text-align: center;
+      @media screen and (max-width: 1400px) {
+        font-size: 4rem;
+      }
+      @include breakpoint-down(medium) {
+        font-size: 3.5rem;
+      }
+      @include breakpoint-down(small) {
+        font-size: 2.5rem;
+      }
+    }
+    hr {
+      width: 50rem;
+      margin-block: 3rem;
+      border: 2px solid #5b3ec1;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      @include breakpoint-down(medium) {
+        width: 30rem;
+      }
+      @include breakpoint-down(small) {
+        width: 100%;
+      }
+    }
+    p {
+      font-size: 1.7rem;
+      line-height: 30px;
+      letter-spacing: 0.1em;
+      padding: 0rem 20rem;
+      text-align: center;
+      @include breakpoint-down(medium) {
+        padding: 0rem;
+      }
+      @include breakpoint-down(small) {
+        font-size: 1.5rem;
+        line-height: 24px;
+      }
+    }
+  }
+  &-table {
+    margin-top: 3rem;
+    text-align: center;
+
+    @include breakpoint-down(medium) {
+      overflow-x: auto;
+    }
+    .table-title {
+      margin-top: 6rem;
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      font-weight: 500;
+      color: #000;
+    }
+
+    &-content {
+      width: 100%;
+      text-align: center;
+      border-spacing: 0;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      overflow: hidden;
+      thead {
+        background: #5b3ec1;
+        border-spacing: 0px;
+      }
+      th {
+        font-size: 1.6rem;
+        font-family: "Rubik";
+        font-weight: 500;
+        padding: 4rem 2rem;
+        color: #fff;
+      }
+      td {
+        font-size: 1.4rem;
+        border-right: 0.2px solid #c4c4c4;
+        padding: 3rem 1rem;
+        background: #333;
+        color: #fff;
+      }
+    }
+  }
+}

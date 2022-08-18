@@ -1,0 +1,199 @@
+.trading__glossary {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #fbebee 0%,
+    #f8f4f8 45.37%,
+    #eeebf9 63.02%,
+    #dcf2fc 100%
+  );
+
+  &__wrapper {
+    padding: 20rem 20rem;
+    @media screen and (max-width: 1500px) {
+      padding: 20rem 5rem 15rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 20rem 4rem 15rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 15rem 2rem;
+    }
+  }
+  &__heading {
+    text-align: center;
+    margin-bottom: 10rem;
+    font-size: 7rem;
+    font-weight: 500;
+    @media screen and (max-width: 1400px) {
+      font-size: 5rem;
+    }
+    @include breakpoint-down(medium) {
+      font-size: 4.5rem;
+    }
+    @include breakpoint-down(small) {
+      font-size: 3rem;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ::-webkit-scrollbar {
+      width: 10px;
+      background-color: #eaeaea;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px #e3e3e3;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: #5b3ec1;
+    }
+    &-alphabet {
+      flex-basis: 5%;
+      &-scrollbar {
+        height: 76.2375rem;
+        margin: 0 auto;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        @include breakpoint-down(small) {
+          height: 40rem;
+        }
+        &__wrapper {
+          padding-right: 2rem;
+        }
+      }
+      .tg__active {
+        width: auto;
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: "Rubik";
+        background: #5b3ec1;
+        color: #fff;
+        border: 2px solid #333;
+        cursor: pointer;
+        padding: 1.8rem 2rem;
+        text-align: center;
+        margin-block: 2rem;
+        transition: all 0.1s ease-in-out;
+        @include breakpoint-down(small) {
+          font-size: 1.6rem;
+          padding: 1rem;
+        }
+      }
+      .tg_text {
+        width: auto;
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: "Rubik";
+        cursor: pointer;
+        background: transparent;
+        border: 2px solid #333;
+        padding: 1.8rem 2rem;
+        text-align: center;
+        margin-block: 2rem;
+        transition: all 0.1s ease-in-out;
+        @include breakpoint-down(small) {
+          font-size: 1.6rem;
+          padding: 1rem;
+        }
+      }
+    }
+    &-accordion {
+      flex-basis: 94%;
+    }
+  }
+}
+.accordion__section {
+  padding-inline: 10rem;
+  @include breakpoint-down(medium) {
+    padding-inline: 4rem;
+  }
+  @include breakpoint-down(small) {
+    padding-inline: 2rem;
+  }
+  .accordion__container {
+    .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 2rem;
+      margin-block: 2rem;
+      border-bottom: 2px solid #5b3ec1;
+      h1 {
+        font-family: "Rubik";
+        font-size: 3rem;
+        @include breakpoint-down(small) {
+          font-size: 1.6rem;
+        }
+      }
+      span {
+        color: #5b3ec1;
+        font-size: 2rem;
+      }
+    }
+    .accordion__dropDown {
+      p {
+        font-size: 1.8rem;
+        font-weight: 500;
+        @include breakpoint-down(small) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+.calender {
+  text-align: center;
+  padding: 20rem 20rem;
+  @media screen and (max-width: 1500px) {
+    padding: 20rem 5rem;
+  }
+  @include breakpoint-down(medium) {
+    padding: 20rem 4rem;
+  }
+  @include breakpoint-down(small) {
+    padding: 15rem 2rem;
+  }
+  &__heading {
+    h2 {
+      font-size: 5rem;
+      font-weight: 500;
+      @media screen and (max-width: 1400px) {
+        font-size: 4rem;
+      }
+      @include breakpoint-down(medium) {
+        font-size: 3.5rem;
+      }
+      @include breakpoint-down(small) {
+        font-size: 2.5rem;
+      }
+    }
+    hr {
+      width: 30rem;
+      margin-block: 5rem;
+      border: 2px solid #5b3ec1;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      @include breakpoint-down(small) {
+        width: 100%;
+      }
+    }
+  }
+  img {
+    @include breakpoint-down(medium) {
+      width: 100%;
+    }
+  }
+}
