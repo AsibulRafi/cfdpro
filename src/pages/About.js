@@ -3,9 +3,6 @@ import Call from "../components/Contact/Calls";
 import Message from "../components/Contact/Message";
 import aboutImg from "../image/aboutImg.png";
 const About = () => {
-
-
-
   const [select, setSelect] = useState("Call");
   const buttons = {
     Call: <Call />,
